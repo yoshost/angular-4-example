@@ -6,13 +6,14 @@ import { LoginComponent } from './app/login/login.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
 import { StudentComponent } from './app/student/student.component';
 import { TutorialComponent } from './app/tutorial/tutorial.component';
+import { HomeComponent } from './app/home/home.component';
 
 export const appRouters: Routes = [
-  { path:'', component: AboutComponent },
-  { path:'', component: LoginComponent },
-  { path:'', component: NavbarComponent },
-  { path:'', component: SignupComponent },
-  { path:'', component: StudentComponent },
-  { path:'', component: TutorialComponent }
+  { path:'about', component: AboutComponent },
+  { path:'login', component: LoginComponent },
+  { path:'signup', component: SignupComponent },
+  { path:'students', component: StudentComponent },
+  { path:'tutorials', component: TutorialComponent },
+  { path:'', component: HomeComponent }
   //{ path:'', redirectTo:'', pathMatch: 'full' }
 ]

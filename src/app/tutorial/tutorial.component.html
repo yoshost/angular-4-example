@@ -1,3 +1,9 @@
-<p>
-  tutorial works!
-</p>
+<h1>Tutorials List</h1>
+
+<div>
+    <ul>
+      <li *ngFor="let tutorial of tutorials">
+        <span>{{tutorial.tid+"      :        "+tutorial.name}}</span>
+      </li>
+    </ul>
+</div>

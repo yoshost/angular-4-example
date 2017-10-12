@@ -11,7 +11,12 @@ import { AboutComponent } from './about/about.component';
 import { StudentComponent } from './student/student.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 
+import { StudentService }   from './services/student.service';
 import { TutorialService }   from './services/tutorial.service';
+
+import { HomeComponent } from './home/home.component';
+
+import { appRouters } from '../routes'
 
 @NgModule({
   declarations: [
@@ -21,14 +26,18 @@ import { TutorialService }   from './services/tutorial.service';
     SignupComponent,
     AboutComponent,
     StudentComponent,
-    TutorialComponent
+    TutorialComponent,
+    HomeComponent
   ],
   imports: [
-    RouterModule,
+    RouterModule.forRoot(appRouters),
     FormsModule,
     BrowserModule
   ],
-  providers: [TutorialService],
+  providers: [
+    StudentService,
+    TutorialService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
